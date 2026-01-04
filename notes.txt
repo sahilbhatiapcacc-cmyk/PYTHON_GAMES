@@ -1,0 +1,224 @@
+#this is comment in python 
+this notes.txt is for notes for python cource
+
+CONDITOINAL OPERATOROR
+"X" if condition else "Y"
+
+LENGTH FUNCTION
+len(variablename) -> gives you number of charcters in it
+
+FIND METHOD FOR FIRST OCCURANCE
+variablename.find("finding element")
+
+FIND METHOD FOR LAST OCCURANCE 
+variablename.rfind("finding element")
+
+CAPATALIZE METHOD
+variablename.capatalize() -> leaving the barcket empty
+this will capatalize the first letter
+
+UPPER()
+this helps is upperccasing the whole text(variablename.upper())
+
+LOWER()
+this helps is lowercasing the whole text(varaibelname.lower())
+
+ISDIGIT()
+this will return TRUE if and only if the variable name inside the isdigit() is digits
+
+ISALPHA()
+this will give TRUE if only alphabets are there in the variable_name(space " " is not trated as string in isalpha() )
+
+COUNT()
+this is used to count specific cccharaccter in the string and gives you the number of charcter in that strings
+example= variable_name.count("0")
+
+REPLACE() METHOD
+used to replace any charcter with another inside the string
+example= variable_name.replace("-"," ")
+
+
+
+STRING INDEXING
+indexing synatx is ->
+variable_name[start:end:stop]
+indexing always strat from 0
+and goes till (end-1) 
+
+last indexing goes form ->
+-1(end-most charcter) and -4(fourth last charcter)
+
+to reverse the number ->
+variable_name=varaibel_name[::-1] 
+
+
+FORMAT SPECIFIERS
+used as {value:flags} ->
+{price:.2f} -> for two point decimal value
+
+
+WHILE LOOP
+
+
+FOR LOOP
+for counter in range(start,stop,step):
+    print("whatever")
+
+for is used when we know the noumber of iteration before hand 
+for goes form start to stop-1 having step of step
+
+unique use of for loop ->
+for counter in y:
+    print("whatever")
+#and y being a series of character
+
+
+BREAK AND CONTINUE
+
+same as c langauge 
+
+TIME LIBRARY(import time)
+time.sleep(no. of seconds) ->
+this will sleep the execution for the number of seconds 
+
+DIFFERENT TYPES OF COLLECTIONS ->
+COLLECTIONS -> a single variable used for storing multiple values
+
+L_I_S_T ->
+
+lst =["one","two","three"]
+lst[0]
+lst.append("five")
+lst.insert(index_number,"number")
+lst.remove("element name")
+lst.sort() -> willl sort the list in order
+lst.reverse() -> will reverse the order in according to the order which we initialized 
+
+lst.clear() -> this will clear all the elements form the list
+lst.index("element name") -> this will give the index of that element
+lst.count(element name) -> thisb will give the number of count of the presence of that element
+
+"elementname" in lst -> this will give boolean value true/false
+
+len(lst) -> this will give the length of the comma seperated elements in the list
+
+
+
+S_E_T ->
+
+set is unordered and immutable so INDEXING wont work in set [NO DUPLICATES ARE ALLOWED]
+
+st={"one","two","three"} -> OK
+st = {"one","two","one"}  -> NOT OK (duplicate not allowed)
+we can only add/remove not chage the element name
+
+st.add("element name") -> we use .add because print(st) will give random order of elements everytime
+st.remove("elementname") -> remove that element and give the set in random order 
+st.pop() -> this will delete a random element from the set{}
+print(element_name in set/tuple/list name)
+
+T_U_P_L_E() ->  uses round bracket to represent TUPLE
+tuple() is way more faster than list 
+duplicate within tuple is considered 
+so, we can use ->
+tuplename.count("element name")
+
+
+D_I_C_T_I_O_N_A_R_I_E_S{}
+
+dictionaries uses {key:value} -> pair 
+
+.get() -> method is used to to gather the value for that key
+student.get("sahil") -> will return value assiciated with it
+studnet.get(koibhi) -> will return "none" if it does not have the key written in get()
+
+.update() method is used to update/add a new key-value pair 
+if the key in the update() is not in the dictionary then a new key:value pair will be added
+
+.popitem() -> will delete the latest key:value pair
+.pop("key") -> will delete the the key:value
+.clear() -> will clear the dictionay with no key:value remaining
+
+to get key and values in dictionaries seperately ->
+.keys() -> will give all keys
+.values() -> will give all the values 
+
+student.items() -> will give the 2-D list of tupels -> [("sahil",7),(...),(...)]
+
+
+we can ->
+
+for key,value in student.items():
+    print(f"{key}:{value}")
+
+this will print the key:value pair in the proper format.
+
+
+R_A_N_D_O_M-M_O_D_U_L_E
+
+import random
+random.randint(low,high)
+
+random.random() -> this will give a random floating point number between 0 and 1.
+random.random() -> this method takes no arguments.
+
+.choice() method -> it is used to choose from the sequence
+random.choice(options) -> where options is defined by the user
+
+.shuffle() method -> it is used to shuffle the sequence 
+random.shuffle("sequence variable") -> after printing it will give jumbeled sequence
+
+
+FUNCTIONS IN PYTHON
+
+we use function so that we can reuse a block of code multiple times in the code.
+we use def() to make functions in python
+
+def function_name(): and then all the content of function will be with an indentation
+
+for example ->
+
+def happy_birthday():
+    print("happy")
+    print("birthday")
+    print("to you")
+
+functions has ARGUMENTS also ->
+
+def happy_birthday(name):
+    print(f"happy birthday to {name}")
+
+we can also use ---return--- ->
+def add(x,y):
+    z=x+Y
+    return z
+
+now we can use ->
+print(add(3,6)) -> output will give these parameters to the function's argument and return its addition.
+
+DEFUALT ARGUMENTS ->
+1.POSITIONAL
+2.DEFUALT
+3.KEYWORD
+4.ARBITRARY
+
+def sales(1st argument,2nd argument=7,3rd argument=0.98765):
+    .
+    .
+    .
+
+print(sales(500)) -> we ccan only give one or as many parameters as we want by using deafult arguments .
+we have assigned 2nd argument and 3rd argument to zero(or any other value , that will remain cconstant throughout the function)
+
+for example ->
+
+import time
+def countertime(end ,start=0):      # we have to place the default argument after the non-deafult arguemnt.
+    for x in range(start,end+1):
+        print(x)
+        time.sleep(1)
+    print("done!!")
+countertime(0,10)
+
+but, what if we want to start with 0 all the time. 
+here , we can default argument.
